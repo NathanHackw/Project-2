@@ -1,6 +1,5 @@
 def linear(m, x, b):
-    y = float(m) * float(x)
-    y = y + float(b)
+    y = m * x + b
     return y
 
 def slope_units(x_units, y_units):

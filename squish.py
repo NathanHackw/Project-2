@@ -21,3 +21,18 @@ print("x = ", x)
 params, params_cov = scipy.optimize.curve_fit(linear, x, y)
 slope = params[0]
 intercept = params[1]
+#EXERCISE 1
+x_units = "g"
+y_units = "cm"
+print_equation(slope, intercept, x_units, y_units)
+#The equation of the line is: y =  -0.0035136610041552885 cm/g x +  5.009835989748822 cm
+#Im not sure if this is right
+#EXERCISE 2
+fig = plt.figure()
+plt.scatter(x, y, label='Marshmellow Experiment')
+plt.plot(x, linear(x, slope, intercept),label='Linear Fit')
+plt.legend(loc='best')
+plt.xlabel("Weight (g)")
+plt.ylabel("Height (cm)")
+plt.show()
+fig.savefig('Marshmellow_DataPlot.png')
